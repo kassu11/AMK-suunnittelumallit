@@ -1,6 +1,6 @@
 package task05;
 
-private class Player {
+public class Player {
     private static Player instance;
     private int hp;
     private int mp;
