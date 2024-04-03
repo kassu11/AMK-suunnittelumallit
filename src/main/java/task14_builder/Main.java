@@ -17,5 +17,11 @@ public class Main {
         worker.constructBurger();
         BeefBurger mcDonalds = (BeefBurger) worker.getBurger();
         System.out.println(mcDonalds);
+
+        System.out.println("-----------------------");
+
+        worker.constructMegaBurger();
+        mcDonalds = (BeefBurger) worker.getBurger();
+        System.out.println(mcDonalds);
     }
 }

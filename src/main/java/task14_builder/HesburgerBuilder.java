@@ -19,7 +19,7 @@ public class HesburgerBuilder implements BurgeriBuilder {
         burgeri.setSteak("Vege steak");
     }
 
-    public Object getBurger() {
+    public VegeBurger getBurger() {
         return burgeri;
     }
 }

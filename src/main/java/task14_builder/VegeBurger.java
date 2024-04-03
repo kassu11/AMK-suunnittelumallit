@@ -1,23 +1,21 @@
 package task14_builder;
 
 public class VegeBurger {
-    private String bun;
-    private String topping;
-    private String steak;
+    private StringBuilder ingredients = new StringBuilder();
 
     public void setBun(String bun) {
-        this.bun = bun;
+        ingredients.append(bun).append("\n");
     }
 
     public void setTopping(String topping) {
-        this.topping = topping;
+        ingredients.append(topping).append("\n");
     }
 
     public void setSteak(String steak) {
-        this.steak = steak;
+        ingredients.append(steak).append("\n");
     }
 
     public String toString() {
-        return bun + "\n" + steak + "\n" + topping + "\n" + bun;
+        return ingredients.toString();
     }
 }

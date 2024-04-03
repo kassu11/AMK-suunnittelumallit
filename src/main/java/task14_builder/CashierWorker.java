@@ -15,6 +15,16 @@ public class CashierWorker {
         burgeriBuilder.buildBun();
     }
 
+    public void constructMegaBurger() {
+        burgeriBuilder.createNewBurger();
+        burgeriBuilder.buildBun();
+        burgeriBuilder.buildSteak();
+        burgeriBuilder.buildTopping();
+        burgeriBuilder.buildSteak();
+        burgeriBuilder.buildTopping();
+        burgeriBuilder.buildBun();
+    }
+
     public Object getBurger() {
         return burgeriBuilder.getBurger();
     }
