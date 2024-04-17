@@ -30,6 +30,16 @@ public class Kello implements Cloneable {
         return klooni;
     }
 
+    public Object ShallowClone() {
+        Kello klooni = null;
+        try {
+            klooni = (Kello) super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return klooni;
+    }
+
     public String toString() {
         return tunti + ":" + minuutti + ":" + sekuntti;
     }
