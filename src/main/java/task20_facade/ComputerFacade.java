@@ -18,11 +18,13 @@ class ComputerFacade {
     public void start() {
         cpu.freeze();
         memory.load(kBootAddress, hardDrive.read(kBootSector, kSectorSize));
-        cpu.jump(kBootAddress);
+        cpu.jump(memory, kBootAddress);
         cpu.execute();
     }
 
     private static class CPUImpl implements CPU {
+        private Memory memory;
+        private long position;
         @Override
         public void freeze() {
             // Simulating freeze operation
@@ -30,15 +32,18 @@ class ComputerFacade {
         }
 
         @Override
-        public void jump(long position) {
+        public void jump(Memory memory, long position) {
+            this.memory = memory;
+            this.position = position;
             // Simulating jump operation
+
             System.out.println("Jumping to memory address position: " + position);
         }
 
         @Override
         public void execute() {
             // Simulating execute operation
-            System.out.println("Executing CPU instructions");
+            System.out.println("Executing CPU instructions " + memory.getData(position));
         }
     }
 }
