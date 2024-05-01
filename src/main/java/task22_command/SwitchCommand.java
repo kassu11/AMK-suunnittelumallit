@@ -1,4 +1,4 @@
-package task24_command;
+package task22_command;
 
 public class SwitchCommand implements Command {
     private final Valkokangas valkokangas;
